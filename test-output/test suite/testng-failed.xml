@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [test suite]">
+  <test name="test(failed)">
+    <parameter name="radius" value="5"/>
+    <classes>
+      <class name="test.AllTests">
+        <methods>
+          <include name="loginTest"/>
+          <include name="closeBrowser"/>
+          <include name="sendMessageTest"/>
+          <include name="checkDraftTest"/>
+          <include name="goToDraftsTest"/>
+          <include name="logoutTest"/>
+          <include name="openBrowser"/>
+          <include name="checkMessageIsSent"/>
+          <include name="testNewMessageCreation"/>
+          <include name="checkSentPage"/>
+          <include name="saveDraftTest"/>
+        </methods>
+      </class> <!-- test.AllTests -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [test suite] -->

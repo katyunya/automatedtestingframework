@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="test suite" duration-ms="28067" started-at="2017-08-30T11:47:12Z" finished-at="2017-08-30T11:47:40Z">
+    <groups>
+    </groups>
+    <test name="test" duration-ms="28067" started-at="2017-08-30T11:47:12Z" finished-at="2017-08-30T11:47:40Z">
+      <class name="test.AllTests">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:test.AllTests@1d834cf2]" name="openBrowser" is-config="true" duration-ms="3895" started-at="2017-08-30T15:47:12Z" finished-at="2017-08-30T15:47:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:test.AllTests@1d834cf2]" name="loginTest" duration-ms="11257" started-at="2017-08-30T15:47:16Z" finished-at="2017-08-30T15:47:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="testNewMessageCreation()[pri:0, instance:test.AllTests@1d834cf2]" name="testNewMessageCreation" duration-ms="790" started-at="2017-08-30T15:47:27Z" depends-on-methods="test.AllTests.loginTest" finished-at="2017-08-30T15:47:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewMessageCreation -->
+        <test-method status="PASS" signature="saveDraftTest()[pri:0, instance:test.AllTests@1d834cf2]" name="saveDraftTest" duration-ms="1828" started-at="2017-08-30T15:47:28Z" depends-on-methods="test.AllTests.testNewMessageCreation" finished-at="2017-08-30T15:47:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveDraftTest -->
+        <test-method status="PASS" signature="goToDraftsTest()[pri:0, instance:test.AllTests@1d834cf2]" name="goToDraftsTest" duration-ms="302" started-at="2017-08-30T15:47:30Z" depends-on-methods="test.AllTests.saveDraftTest" finished-at="2017-08-30T15:47:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToDraftsTest -->
+        <test-method status="PASS" signature="checkDraftTest()[pri:0, instance:test.AllTests@1d834cf2]" name="checkDraftTest" duration-ms="1393" started-at="2017-08-30T15:47:30Z" depends-on-methods="test.AllTests.goToDraftsTest" finished-at="2017-08-30T15:47:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDraftTest -->
+        <test-method status="PASS" signature="sendMessageTest()[pri:0, instance:test.AllTests@1d834cf2]" name="sendMessageTest" duration-ms="155" started-at="2017-08-30T15:47:31Z" depends-on-methods="test.AllTests.checkDraftTest" finished-at="2017-08-30T15:47:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendMessageTest -->
+        <test-method status="PASS" signature="checkMessageIsSent()[pri:0, instance:test.AllTests@1d834cf2]" name="checkMessageIsSent" duration-ms="1517" started-at="2017-08-30T15:47:32Z" depends-on-methods="test.AllTests.sendMessageTest" finished-at="2017-08-30T15:47:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMessageIsSent -->
+        <test-method status="PASS" signature="checkSentPage()[pri:0, instance:test.AllTests@1d834cf2]" name="checkSentPage" duration-ms="318" started-at="2017-08-30T15:47:33Z" depends-on-methods="test.AllTests.checkMessageIsSent" finished-at="2017-08-30T15:47:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSentPage -->
+        <test-method status="PASS" signature="logoutTest()[pri:0, instance:test.AllTests@1d834cf2]" name="logoutTest" duration-ms="1344" started-at="2017-08-30T15:47:33Z" depends-on-methods="test.AllTests.checkSentPage" finished-at="2017-08-30T15:47:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:test.AllTests@1d834cf2]" name="closeBrowser" is-config="true" duration-ms="5246" started-at="2017-08-30T15:47:35Z" finished-at="2017-08-30T15:47:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.AllTests -->
+    </test> <!-- test -->
+  </suite> <!-- test suite -->
+</testng-results>
