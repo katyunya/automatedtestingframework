@@ -22,7 +22,7 @@ public class Driver {
     public static RemoteWebDriver getWebDriverInstance(String name, DriverTypes driverType) throws MalformedURLException {
         RemoteWebDriver remoteWebDriver;
         DesiredCapabilities capabilities;
-        if (!instances.containsKey(name)) {
+        if (!instances.containsKey(name) || instances == null) {
             switch (driverType) {
                 case CHROME:
                     capabilities = DesiredCapabilities.chrome();

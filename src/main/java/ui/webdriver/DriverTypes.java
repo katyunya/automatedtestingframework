@@ -5,7 +5,7 @@ public enum DriverTypes {
 
     private String driverName;
 
-    private DriverTypes(String driverName){
+    private DriverTypes(String driverName) {
         this.driverName = driverName;
     }
 

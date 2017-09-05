@@ -2,11 +2,10 @@ package test;
 
 import businessobjects.Account;
 import businessobjects.Message;
-import businessobjects.builder.BaseBuilder;
 import businessobjects.builder.SimpleMessageBuilder;
+import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import runner.Runner;
 import ui.pageobjects.*;
 
 import static businessobjects.builder.SimpleMessageBuilder.buildMessage;
@@ -14,6 +13,8 @@ import static org.testng.Assert.assertTrue;
 import static runner.Runner.getUrl;
 
 public class AllTests extends RemoteBaseTest {
+
+    private static final Logger logger = Logger.getLogger(AllTests.class);
 
     MainPage mainPage;
     NewMessagePage newMessagePage;
@@ -30,14 +31,27 @@ public class AllTests extends RemoteBaseTest {
 
     @Test
     public void loginTest() {
+        logger.info("Start 'loginTest'");
         loginPage = navigate(url);
         mainPage = loginPage.doLogin(account.getLogin(), account.getPassword(), account.getDomain());
+        logger.info("Finish 'loginTest'");
         assertTrue(mainPage.isExitButtonPresented(), "Exit button does not presented!");
     }
 
+//    @Test
+//    public void failTest() {
+//        logger.info("Start 'loginTest'");
+//        loginPage = navigate(url);
+//        mainPage = loginPage.doLogin(account.getLogin() + "dfhdsjf", account.getPassword(), account.getDomain());
+//        logger.info("Finish 'loginTest'");
+//        assertTrue(mainPage.isExitButtonPresented(), "Exit button does not presented!");
+//    }
+
     @Test(dependsOnMethods = "loginTest")
     public void testNewMessageCreation() {
+        logger.info("Start 'testNewMessageCreation'");
         newMessagePage = mainPage.clickNewMessageButton();
+        logger.info("Finish 'testNewMessageCreation'");
         assertTrue(newMessagePage.isAddressInputPresented(), "Address field does not presented!");
     }
 
